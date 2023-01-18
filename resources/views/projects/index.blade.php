@@ -13,10 +13,10 @@
 
 
             <div class="h-full pt-5 pb-20 overflow-scroll no-scroll">
-                @include('project.partials.nav')
+                @include('projects.partials.nav')
 
 
-                @include('project.partials.list')
+                @include('projects.partials.list')
             </div>
 
         </div>

@@ -23,10 +23,10 @@
 
 
 
-            <div class="h-full pt-5 pb-20 overflow-scroll no-scroll">
-                @include('projects.activities.partials.nav')
+            <div class="max-h-full pt-5 pb-20 overflow-scroll no-scroll">
+                @include('projects.about.partials.nav')
 
-                @include('projects.activities.partials.list')
+                @include('projects.about.partials.form')
             </div>
 
         </div>

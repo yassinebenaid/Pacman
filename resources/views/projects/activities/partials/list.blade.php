@@ -8,26 +8,13 @@
 
     <div class="grid items-start grid-cols-3 gap-10">
         <div
-            class="rounded-lg flex flex-col max-h-[67vh] no-scroll pb-[8rem] p-5 bg-white col-span-2 gap-4 overflow-scroll shadow-default">
+            class="rounded-lg flex flex-col max-h-[66vh] no-scroll pb-[8rem] px-5 bg-white col-span-2  overflow-scroll shadow-default">
 
             @foreach (range(1, 20) as $image)
-                <div class="p-2 border-b border-gray-2">
-                    <div class="flex gap-5">
-                        <div>
-                            <div class="font-medium">Yassine benaid</div>
-                            <div class="text-sm text-gray-3">web developer</div>
-                        </div>
-                    </div>
-
-
-                    <div class="p-5 text-gray-3">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores placeat voluptates iure
-                            officia ducimus similique dicta sed, dignissimos voluptas nulla nihil. Voluptatem, vitae
-                            doloremque. Saepe quas pariatur impedit ut dolorum.
-                        </p>
-
-                        <div class="w-full text-xs text-end">1 apr 2023</div>
-                    </div>
+                <div class="flex gap-5 p-2 py-5 transition-all border-b border-gray-2 hover:bg-gray-1">
+                    <div class="font-medium">1 apr 2023, 12:14</div>
+                    <div class="font-semibold">yassine benaid</div>
+                    added new task
                 </div>
             @endforeach
 

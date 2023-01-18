@@ -33,5 +33,3 @@ window.addEventListener("test", (e) => {
     })
 })
 
-
-

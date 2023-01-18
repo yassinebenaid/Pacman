@@ -33,14 +33,4 @@
         </div>
 
     </div>
-
-    {{-- <div class="flex justify-between">
-
-        <div class="flex gap-5 py-2 pt-3 font-medium text-gray-3">
-            <div class="transition-all cursor-pointer hover:text-primary hover:opacity-90">All</div>
-            <div class="transition-all cursor-pointer hover:text-primary hover:opacity-90">Images</div>
-            <div class="transition-all cursor-pointer hover:text-primary hover:opacity-90">Pdf</div>
-            <div class="transition-all cursor-pointer hover:text-primary hover:opacity-90">Others</div>
-        </div>
-    </div> --}}
 </div>

@@ -18,16 +18,16 @@
     <div class="grid gap-10 py-10 text-xl font-bold text-gray-3 pl-7">
         <div
             class="transition-all xl:after:inline after:hidden after:content-[''] after:border-primary after:rounded-l-lg after:border-2 after:absolute after:right-0 after:h-full relative rounded-lg cursor-pointer text-primary hover:text-primary hover:opacity-80 ">
-            <i class="px-2 text-4xl bi bi-layers "></i> <span class="hidden xl:inline"> Projects </span>
+            <i class="px-2 text-2xl bi bi-layers "></i> <span class="hidden xl:inline"> Projects </span>
         </div>
         <div class="transition-all cursor-pointer hover:text-primary hover:opacity-80">
-            <i class="px-2 text-3xl bi bi-calendar"></i> <span class="hidden xl:inline"> Calender</span>
+            <i class="px-2 text-2xl bi bi-calendar"></i> <span class="hidden xl:inline"> Calender</span>
         </div>
         <div class="transition-all cursor-pointer hover:text-primary hover:opacity-80">
-            <i class="px-2 text-3xl bi bi-flag"></i> <span class="hidden xl:inline">Reports</span>
+            <i class="px-2 text-2xl bi bi-flag"></i> <span class="hidden xl:inline">Reports</span>
         </div>
         <div class="transition-all cursor-pointer hover:text-primary hover:opacity-80">
-            <i class="px-2 text-3xl bi bi-arrow-left-right"></i> <span class="hidden xl:inline">Discussion</span>
+            <i class="px-2 text-2xl bi bi-arrow-left-right"></i> <span class="hidden xl:inline">Discussion</span>
         </div>
     </div>
 
