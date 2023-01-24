@@ -34,6 +34,7 @@ module.exports = {
                 "default-3": "0px 0px 30px 0px #E5ECFF",
                 "default-4": "0px 0px 40px 0px #E5ECFF",
                 "default-5": "0px 0px 50px 0px #E5ECFF",
+                "door": "0px 20px 50px 0px #10002b14",
             }
         },
     },

@@ -1,4 +1,6 @@
-<div class="p-5 bg-white rounded-lg shadow-default">
+<x-breeze.create-button>Add Note</x-breeze.create-button>
+
+{{-- <div class="p-5 bg-white rounded-lg shadow-default">
     <div class="flex justify-between py-3 pr-5">
         <div class="text-lg font-bold"> Notes</div>
     </div>
@@ -11,4 +13,4 @@
 
     </form>
 
-</div>
+</div> --}}

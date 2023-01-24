@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ShowProjectDetails;
+use App\Http\Livewire\Project\Details;
+use App\Http\Livewire\Project\Index;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view("projects.index");
-});
+Route::middleware(['auth', 'verified'])->group(function () {
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    Route::get('/', Index::class)->name("home");
+    Route::get('/project/{project}', Details::class)->name("project.show");
 
-Route::middleware('auth')->group(function () {
+    // Route::prefix('/project/{project:definer}')->group(function () {
+    //     Route::get('/', [ShowProjectDetails::class,'show'])->name("project.show");
+    //     Route::get('/tasks', [ShowProjectDetails::class,'tasks'])->name("project.tasks");
+    //     Route::get('/notes', [ShowProjectDetails::class,'notes'])->name("project.notes");
+    //     Route::get('/files', [ShowProjectDetails::class,'files'])->name("project.files");
+    //     Route::get('/activities', [ShowProjectDetails::class,'activities'])->name("project.activities");
+    //     Route::get('/members', [ShowProjectDetails::class,'members'])->name("project.members");
+    // });
+
+
+
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

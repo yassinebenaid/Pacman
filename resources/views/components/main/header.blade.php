@@ -4,7 +4,7 @@
     </div>
     <div class="flex items-center gap-5">
 
-        <x-breeze.search-input />
+        <x-main.global-search />
 
         <div>
             <i

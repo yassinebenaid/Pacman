@@ -6,7 +6,7 @@
 
 
     {{-- model --}}
-    <div x-show="shown" x-cloak class="fixed top-0 right-0 w-screen h-screen bg-indigo-900/20">
+    <div x-show="shown" x-cloak class="fixed top-0 right-0 z-50 w-screen h-screen bg-indigo-900/20">
 
 
         <div x-on:click.away="shown=false" x-show="shown" x-cloak x-transition:enter="ease duration-300"

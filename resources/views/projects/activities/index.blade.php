@@ -1,37 +1,26 @@
-<x-app-layout>
-    <div class="flex justify-between h-screen gap-1 overflow-hidden">
-
-        <div class=" w-max xl:w-96">
-            <x-main.sidebar />
+<div>
+    <div class="flex justify-between p-3 py-5">
+        <div class="text-gray-3"> 1 apr 2023, 21:00 </div>
+        <div class="flex items-center gap-8">
+            <span><i class="text-2xl cursor-pointer bi bi-repeat text-gray-3 hover:text-primary"></i></span>
         </div>
+    </div>
 
-        <div class="flex-1 h-full p-4 md:p-8">
+    <div class="grid items-start grid-cols-3 gap-10">
+        <div
+            class="rounded-lg flex flex-col max-h-[66vh] no-scroll pb-[8rem] px-5 bg-white col-span-2  overflow-scroll shadow-default">
 
-
-            <x-main.header>
-                <div class="grid gap-3">
-                    <div>
-                        Facebook
-                        <span class="self-end pl-5 text-sm cursor-pointer text-gray-3 hover:underline">Edit</span>
-                    </div>
-
-                    <div class="text-sm font-normal cursor-pointer text-slate-500 hover:underline w-max">
-                        <i class="bi bi-chevron-left"></i> All projects
-                    </div>
+            @foreach (range(1, 20) as $image)
+                <div class="flex gap-5 p-2 py-5 transition-all border-b border-gray-2 hover:bg-gray-1">
+                    <div class="font-medium">1 apr 2023, 12:14</div>
+                    <div class="font-semibold">yassine benaid</div>
+                    added new task
                 </div>
-            </x-main.header>
-
-
-
-            <div class="h-full pt-5 pb-20 overflow-scroll no-scroll">
-                @include('projects.activities.partials.nav')
-
-                @include('projects.activities.partials.list')
-            </div>
+            @endforeach
 
         </div>
 
-    </div>
-    </div>
 
-</x-app-layout>
+        @include('projects.activities.partials.filters')
+    </div>
+</div>

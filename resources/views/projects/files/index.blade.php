@@ -1,37 +1,34 @@
-<x-app-layout>
-    <div class="flex justify-between h-screen gap-1 overflow-hidden">
-
-        <div class=" w-max xl:w-96">
-            <x-main.sidebar />
+<div>
+    <div class="flex justify-between p-3 py-5">
+        <div class="text-gray-3"> {{ $project->files_count }} items in result </div>
+        <div class="flex items-center gap-8">
+            <span>View</span>
+            <span wire:click='grid'
+                class="font-semibold cursor-pointer {{ $view === 'grid' ? 'text-primary' : 'text-gray-3' }}"><i
+                    class="bi bi-grid-3x3-gap-fill"></i> Grid</span>
+            <span wire:click='table'
+                class="font-semibold cursor-pointer {{ $view === 'table' ? 'text-primary' : 'text-gray-3' }}"><i
+                    class="text-xl bi bi-list"></i>
+                List</span>
+            <span wire:click='$refresh'><i
+                    class="text-2xl cursor-pointer bi bi-repeat text-gray-3 hover:text-primary"></i></span>
         </div>
-
-        <div class="flex-1 h-full p-4 md:p-8">
-
-
-            <x-main.header>
-                <div class="grid gap-3">
-                    <div>
-                        Facebook
-                        <span class="self-end pl-5 text-sm cursor-pointer text-gray-3 hover:underline">Edit</span>
-                    </div>
-
-                    <div class="text-sm font-normal cursor-pointer text-slate-500 hover:underline w-max">
-                        <i class="bi bi-chevron-left"></i> All projects
-                    </div>
-                </div>
-            </x-main.header>
-
-
-
-            <div class="h-full pt-5 pb-20 overflow-scroll no-scroll">
-                @include('projects.files.partials.nav')
-
-                @include('projects.files.partials.list')
-            </div>
-
-        </div>
-
-    </div>
     </div>
 
-</x-app-layout>
+    <div class="grid grid-cols-3 gap-10">
+
+        @if ($view === 'table')
+            @include('projects.files.partials.table')
+        @else
+            @include('projects.files.partials.grid')
+        @endif
+
+        <div class="h-max">
+            @include('projects.files.partials.filters')
+        </div>
+    </div>
+
+    <div class="pt-10">
+        {{ $project->files->links() }}
+    </div>
+</div>

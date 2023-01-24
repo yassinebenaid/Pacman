@@ -1,38 +1,41 @@
-<x-app-layout>
-    <div class="flex justify-between h-screen gap-1 overflow-hidden">
-
-        <div class=" w-max xl:w-96">
-            <x-main.sidebar />
+<div class="pb-[8rem]">
+    <div class="flex justify-end p-3 py-5">
+        <div class="flex items-center gap-8">
+            <span wire:click='$refresh'><i
+                    class="text-2xl cursor-pointer bi bi-repeat text-gray-3 hover:text-primary"></i></span>
         </div>
+    </div>
 
-        <div class="flex-1 h-full p-4 md:p-8">
+    <div class="grid items-start gap-10 lg:grid-cols-6">
+        <div class="flex flex-col w-full gap-4 p-5 bg-white rounded-lg lg:col-span-4 lg:col-start-2 shadow-default">
 
-
-            <x-main.header>
-                <div class="grid gap-3">
-                    <div>
-                        Facebook
-                        <span class="self-end pl-5 text-sm cursor-pointer text-gray-3 hover:underline">Edit</span>
+            @foreach ($project->notes as $note)
+                <div class="p-2 border-b border-gray-2">
+                    <div class="flex gap-5">
+                        <div class="w-14">
+                            <x-main.avatar src="29.jpg" />
+                        </div>
+                        <div>
+                            <div class="font-medium">{{ $note->user->name }}</div>
+                            <div class="text-sm text-gray-3">{{ $note->user->profession }}</div>
+                        </div>
                     </div>
 
-                    <div class="text-sm font-normal cursor-pointer text-slate-500 hover:underline w-max">
-                        <i class="bi bi-chevron-left"></i> All projects
+
+                    <div class="p-5 text-gray-3">
+                        <p>{!! safe_text($note->body) !!}</p>
+
+                        <div class="w-full text-xs text-end">{{ $note->created_at }}</div>
                     </div>
                 </div>
-            </x-main.header>
-
-
-
-            <div class="h-full pt-5 pb-20 overflow-scroll no-scroll">
-                @include('projects.notes.partials.nav')
-
-
-                @include('projects.notes.partials.list')
-            </div>
-
+            @endforeach
         </div>
 
-    </div>
-    </div>
 
-</x-app-layout>
+        {{-- @include('projects.notes.partials.form') --}}
+
+    </div>
+    <div class="pt-10">
+        {{ $project->notes->links() }}
+    </div>
+</div>
