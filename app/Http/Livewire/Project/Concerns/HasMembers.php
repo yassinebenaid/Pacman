@@ -66,4 +66,26 @@ trait HasMembers
     {
         Project::whereDefiner($this->definer)->first()->members()->attach($member_id, ["accepted" => true]);
     }
+
+    /**
+     * accept membership request
+     *
+     * @param string $member_id member id encrypted
+     * @return void
+     */
+    public function upgrade($member_id)
+    {
+        Project::whereDefiner($this->definer)->first()->members()->updateExistingPivot(decrypt($member_id), ['is_manager' => true]);
+    }
+
+    /**
+     * accept membership request
+     *
+     * @param string $member_id member id encrypted
+     * @return void
+     */
+    public function disupgrade($member_id)
+    {
+        Project::whereDefiner($this->definer)->first()->members()->updateExistingPivot(decrypt($member_id), ['is_manager' => false]);
+    }
 }

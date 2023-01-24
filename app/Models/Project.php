@@ -56,9 +56,13 @@ class Project extends Model
 
     public function authIsManager()
     {
-        return auth()->id() === $this->manager_id;
+        return (auth()->id() === $this->manager_id) || $this->auth_is_manager;
     }
 
+    public function authIsOwner()
+    {
+        return auth()->id() === $this->manager_id;
+    }
 
     public function getCreatedAtAttribute()
     {

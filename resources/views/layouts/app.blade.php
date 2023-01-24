@@ -37,9 +37,10 @@
     @livewireStyles
 </head>
 
-<body class="select-none  selection:bg-primary selection:text-white bg-gray text-gray-4">
+<body class="select-none selection:bg-primary selection:text-white bg-gray text-gray-4">
 
     {{ $slot }}
+
 
 </body>
 

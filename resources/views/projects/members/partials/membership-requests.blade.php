@@ -18,8 +18,7 @@
 
             @if ($project->membership_requests->isNotEmpty())
                 <div class="relative p-5">
-                    <i x-on:click="shown=false"
-                        class="absolute cursor-pointer bi bi-x-lg right-5 top-5 text-gray-3"></i>
+                    <i x-on:click="open=0" class="absolute cursor-pointer bi bi-x-lg right-5 top-5 text-gray-3"></i>
                     <div class="pb-1 text-xl font-bold ">
                         Membership Raquests
                     </div>
@@ -56,8 +55,7 @@
             @else
                 {{-- placeholder --}}
                 <div class="relative py-20 text-center">
-                    <i x-on:click="shown=false"
-                        class="absolute cursor-pointer bi bi-x-lg right-5 top-5 text-gray-3"></i>
+                    <i x-on:click="open=0" class="absolute cursor-pointer bi bi-x-lg right-5 top-5 text-gray-3"></i>
 
                     <div class="flex justify-center py-3">
                         <div class="grid px-3 py-2 rounded-full bg-indigo-50 place-content-center text-primary">

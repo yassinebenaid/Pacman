@@ -88,7 +88,7 @@ class ProjectService
             ->withCount(["members as auth_is_member" => fn ($query) => $query->whereMemberId(auth()->id())->whereAccepted(true)])
             ->firstOrFail();
 
-        $project->notes = $project->notes()->with("user:id,name,profession")->paginate(5);
+        $project->notes = $project->notes()->with("user:id,name,profession")->paginate(25);
 
         return $project;
     }
@@ -97,6 +97,7 @@ class ProjectService
     {
         $project =   Project::whereDefiner($project_definer)
             ->select(['id', "manager_id", 'definer', "created_at", 'name'])
+            ->withCount(["members as auth_is_manager" => fn ($query) => $query->whereMemberId(auth()->id())->whereAccepted(true)->whereIsManager(true)])
             ->withCount(["members as auth_is_member" => fn ($query) => $query->whereMemberId(auth()->id())->whereAccepted(true)])
             ->withCount(["members as auth_sent_request_member" => fn ($query) => $query->whereMemberId(auth()->id())->whereAccepted(false)])
             ->withCount(["members" => fn ($query) => $query->whereAccepted(true)])
