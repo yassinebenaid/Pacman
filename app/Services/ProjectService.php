@@ -81,18 +81,6 @@ class ProjectService
     }
 
 
-    public static function notes($project_definer)
-    {
-        $project =  Project::whereDefiner($project_definer)
-            ->select(['id', "manager_id", 'definer', "created_at", 'name'])
-            ->withCount(["members as auth_is_member" => fn ($query) => $query->whereMemberId(auth()->id())->whereAccepted(true)])
-            ->firstOrFail();
-
-        $project->notes = $project->notes()->with("user:id,name,profession")->paginate(25);
-
-        return $project;
-    }
-
     public static function members($project_definer, $name_or_email = null)
     {
         $project =   Project::whereDefiner($project_definer)

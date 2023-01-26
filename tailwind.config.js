@@ -17,16 +17,15 @@ module.exports = {
             colors: {
                 "primary": "#3C4DDB",
                 "primary-2": "rgb(146 153 217)",
-                "orange": "#FA6322",
-                "blue": "#5F96E9",
-                "yellow": "#fabe25",
-                "green": "#5ac08f",
+                "orange-1": "#FA6322",
+                "blue-1": "#5F96E9",
+                "yellow-1": "#fabe25",
                 "gray-4": "#30323D",
                 "gray-35": "#6b7183",
                 "gray-3": "#838CA7",
                 "gray-2": "#D4DBEF",
                 "gray-1": "#F4F6FC",
-                "gray": "#f9f9fb",
+                "gray-0": "#f9f9fb",
             },
             boxShadow: {
                 "default": "rgb(60 77 219 / 8%) 0px 4px 12px",
@@ -39,5 +38,8 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    plugins: [
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/typography'),
+    ],
 };

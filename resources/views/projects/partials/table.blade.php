@@ -3,7 +3,7 @@
 
     <div class="bg-white rounded-lg shadow-default">
         <table class="w-full ">
-            <thead class="border-b bg-gray border-gray-2">
+            <thead class="border-b bg-gray-0 border-gray-2">
                 <tr class="grid grid-cols-5 px-4">
                     <td class="p-2 text-xs font-medium text-gray-3">Project Name</td>
                     <td class="p-2 text-xs font-medium text-gray-3">type</td>
@@ -25,7 +25,7 @@
                             </td>
 
                             <td class="grid items-center font-semibold">
-                                <a class="py-4 " href="{{ route('project.show', $project->definer) }}">
+                                <a class="py-4 text-yellow-1" href="{{ route('project.show', $project->definer) }}">
                                     {{ $project->type }}
                                 </a>
                             </td>

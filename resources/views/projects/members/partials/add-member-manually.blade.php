@@ -7,7 +7,7 @@
 
         <div x-show="open" x-transition class="pt-20 mt-10">
 
-            <div x-on:click.away="open=0" class="mx-5 mt-20 bg-gray rounded-xl">
+            <div x-on:click.away="open=0" class="mx-5 mt-20 bg-gray-0 rounded-xl">
 
                 <div class="px-3 py-2 text-xs text-gray-3">Users</div>
 

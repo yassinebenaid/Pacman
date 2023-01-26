@@ -5,7 +5,7 @@
     {{-- projects cards --}}
     @foreach ($projects as $project)
         <div class="p-5 transition-all bg-white rounded-lg shadow-default hover:shadow-door">
-            <div class="flex items-center justify-between p-1 text-sm font-bold text-yellow">
+            <div class="flex items-center justify-between p-1 text-sm font-bold text-yellow-1">
                 {{ $project->type }}
             </div>
             <a href="{{ route('project.show', $project->definer) }}"

@@ -22,7 +22,8 @@
 
                 <div wire:click='section("files")' class="{{ $section === 'files' ? $selected : $normal }}"> Files </div>
 
-                <div wire:click='section("notes")' class="{{ $section === 'notes' ? $selected : $normal }}">Notes</div>
+                <div wire:click='section("issues")' class="{{ $section === 'issues' ? $selected : $normal }}">Issues
+                </div>
 
                 <div wire:click='section("activities")' class="{{ $section === 'activities' ? $selected : $normal }}">
                     Activity</div>
@@ -33,8 +34,8 @@
         </div>
 
         <div>
-            @if ($section === 'notes')
-                <x-breeze.create-button>Add Note</x-breeze.create-button>
+            @if ($section === 'issues')
+                @livewire('project.issue.create', ['definer' => $definer])
             @endif
 
             @if ($section === 'members')

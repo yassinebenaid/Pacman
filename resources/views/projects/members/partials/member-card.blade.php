@@ -39,12 +39,12 @@
                     @if ($member->pivot->is_manager)
                         <div wire:click='disupgrade("{{ encrypt($member->id) }}")'
                             class="p-3 transition-all cursor-pointer hover:bg-gray-1">
-                            <i class="bi bi-shield-minus text-yellow "></i> Disupgrade
+                            <i class="bi bi-shield-minus text-yellow-1 "></i> Disupgrade
                         </div>
                     @else
                         <div wire:click='upgrade("{{ encrypt($member->id) }}")'
                             class="p-3 transition-all cursor-pointer hover:bg-gray-1">
-                            <i class="bi bi-shield-plus text-blue"></i> Upgrade
+                            <i class="bi bi-shield-plus text-blue-1"></i> Upgrade
                         </div>
                     @endif
 

@@ -1,4 +1,4 @@
-<div class="flex justify-between h-screen gap-1 overflow-hidden">
+<div x-data x-on:status:success.window="$wire.$refresh" class="flex justify-between h-screen gap-1 overflow-hidden">
 
     <div class=" w-max xl:w-96">
         <x-main.side />

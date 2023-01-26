@@ -2,14 +2,14 @@
 
 namespace App\Http\Livewire\Project;
 
+use App\Http\Livewire\BaseComponent;
 use App\Services\ProjectService;
 use App\Traits\CanViewAsTableOrGrid;
 use App\Traits\HasMultipleSections;
 use Illuminate\Http\Request;
-use Livewire\Component;
 use Livewire\WithPagination;
 
-class Index extends Component
+class Index extends BaseComponent
 {
     use WithPagination, CanViewAsTableOrGrid, HasMultipleSections;
 

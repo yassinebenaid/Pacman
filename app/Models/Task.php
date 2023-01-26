@@ -55,13 +55,13 @@ class Task extends Model
     }
 
 
-    public function dealineColor(): Attribute
+    public function deadlineColor(): Attribute
     {
         $color = match (true) {
-            $this->deadline_prc <= 50 => '#5ac08f',
-            $this->deadline_prc <= 75 => '#fabe25',
-            $this->deadline_prc <= 100 => '#FA6322',
-            $this->deadline_prc > 100 => 'red',
+            $this->deadline_prc <= 50 => 'text-green-600',
+            $this->deadline_prc <= 75 => 'text-yellow-1',
+            $this->deadline_prc <= 100 => 'text-orange-500',
+            $this->deadline_prc > 100 => 'text-red-500',
         };
 
         return new Attribute(

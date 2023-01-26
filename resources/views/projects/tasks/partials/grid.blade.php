@@ -5,13 +5,13 @@
 
             <div class="flex items-center justify-between p-1 ">
 
-                <div class="text-sm font-bold text-yellow">{{ $task->status->name() }} </div>
+                <div class="text-sm font-bold {{ $task->status->color() }}">{{ $task->status->name() }} </div>
 
                 <div class="relative show-on-hover">
                     <div
                         class="hidden target absolute z-20 bottom-[120%] w-max bg-white p-5 rounded-lg -right-1/2 shadow-default-5">
                         <div class="font-medium">Deadline in {{ $task->deadline_counter }}</div>
-                        <div class="font-semibold text-green">{{ $task->deadline }}</div>
+                        <div class="font-semibold {{ $task->deadline_color }}">{{ $task->deadline }}</div>
 
                         <span class="absolute p-3 bg-white rounded-md right-[10%] rotate-45 bottom-[-15%]"></span>
 

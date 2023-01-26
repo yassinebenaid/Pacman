@@ -7,11 +7,11 @@
 
 
     {{-- the model --}}
-    <div x-show="open" x-cloak class="fixed top-0 left-0 flex  pt-20 justify-center w-screen h-screen bg-primary/10">
+    <div x-show="open" x-cloak class="fixed top-0 left-0 flex justify-center w-screen h-screen pt-20 bg-primary/10">
 
         <div x-show="open" x-on:click.away="open=0" x-transition class="pt-20 mt-10">
 
-            <div class="mx-5 mt-20 bg-gray rounded-xl">
+            <div class="mx-5 mt-20 bg-gray-0 rounded-xl">
 
                 <div class="px-3 py-2 text-xs text-gray-3">Project Type</div>
 

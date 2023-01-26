@@ -5,7 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\File;
-use App\Models\Note;
+use App\Models\Issue;
 use App\Models\Project;
 use App\Models\Task;
 use App\Models\User;
@@ -40,6 +40,6 @@ class DatabaseSeeder extends Seeder
 
         Task::factory(1000)->create();
         File::factory(2000)->create();
-        Note::factory(1000)->create();
+        Issue::factory(1000)->create();
     }
 }

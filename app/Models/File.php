@@ -35,9 +35,9 @@ class File extends Model
     public function icon(): Attribute
     {
         $icon = match ($this->type) {
-            FileType::IMAGE->value => "<i class='text-green bi bi-image'></i>",
+            FileType::IMAGE->value => "<i class='text-green-600 bi bi-image'></i>",
             FileType::PDF->value => "<i class='text-red-500 bi bi-file-earmark-pdf'></i>",
-            FileType::ZIP->value => "<i class='bi bi-file-earmark-zip text-yellow'></i>",
+            FileType::ZIP->value => "<i class='text-yellow-1 bi bi-file-earmark-zip'></i>",
             FileType::SOURCE_CODE->value => "<i style='color:rgb(95 150 233);' class='bi bi-file-earmark-code'></i>",
             FileType::OTHER->value => "<i class='bi bi-file-earmark text-gray-3'></i>",
         };

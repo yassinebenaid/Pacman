@@ -45,7 +45,7 @@
                             </div>
                             <div class="flex gap-3">
                                 <button wire:click='accept("{{ encrypt($request->id) }}")'
-                                    class="font-medium hover:underline text-green">Accept</button>
+                                    class="font-medium text-green-600 hover:underline">Accept</button>
                                 <button wire:click='remove("{{ encrypt($request->id) }}")'
                                     class="font-medium text-red-500 hover:underline">Remove</button>
                             </div>

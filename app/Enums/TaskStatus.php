@@ -27,9 +27,9 @@ enum TaskStatus: string
     public function color()
     {
         return match ($this) {
-            static::IN_PROGRESS => "text-yellow",
+            static::IN_PROGRESS => "text-yellow-1",
             static::PAUSED => "text-slate-500",
-            static::DONE => "text-green",
+            static::DONE => "text-green-600",
         };
     }
 }

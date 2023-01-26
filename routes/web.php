@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowProjectDetails;
 use App\Http\Livewire\Project\Details;
 use App\Http\Livewire\Project\Index;
+use App\Http\Livewire\Project\Issue\Show;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/', Index::class)->name("home");
     Route::get('/project/{project}', Details::class)->name("project.show");
+    Route::get('/project/{project}/issues/{issue}', Show::class)->name("project.issue.show");
 
     // Route::prefix('/project/{project:definer}')->group(function () {
     //     Route::get('/', [ShowProjectDetails::class,'show'])->name("project.show");
