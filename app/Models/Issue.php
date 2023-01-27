@@ -13,12 +13,17 @@ class Issue extends Model
 {
     use HasFactory;
 
-    protected $fillable = ["user_id", "project_id", "body"];
+    protected $fillable = ["user_id", "project_id", "definer", "body"];
 
 
     public function project()
     {
         return $this->belongsTo(Project::class);
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
     }
 
     public function user()

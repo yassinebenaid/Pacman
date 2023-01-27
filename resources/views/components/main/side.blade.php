@@ -1,4 +1,4 @@
-<div class="sticky top-0 flex flex-col h-full bg-white w-max md:w-full shadow-default">
+<div class="sticky top-0 flex flex-col h-screen bg-white w-max md:w-full shadow-default">
 
     <a href="{{ route('home') }}" class="py-5 border- b px-7 border-gray-2 ">
         <x-breeze.application-logo />

@@ -4,6 +4,7 @@
 
     <form method="POST" action="{{ route('login') }}"
         class="after:content-[''] after:p-20 after:-top-6 after:rounded-tl-lg after:rounded-[10rem] after:-left-8 after:-z-10  after:bg-primary after:absolute relative before:content-[''] before:p-20 before:-bottom-6 before:rounded-br-lg before:rounded-[10rem] before:-right-8 before:-z-10  before:bg-primary before:absolute">
+
         @csrf
 
         <!-- Email Address -->

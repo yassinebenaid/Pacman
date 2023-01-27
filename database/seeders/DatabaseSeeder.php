@@ -7,6 +7,7 @@ namespace Database\Seeders;
 use App\Models\File;
 use App\Models\Issue;
 use App\Models\Project;
+use App\Models\Reply;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -41,5 +42,6 @@ class DatabaseSeeder extends Seeder
         Task::factory(1000)->create();
         File::factory(2000)->create();
         Issue::factory(1000)->create();
+        Reply::factory(2000)->create();
     }
 }

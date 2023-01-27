@@ -70,7 +70,7 @@
     @livewireStyles
 </head>
 
-<body class="select-none selection:bg-primary selection:text-white bg-gray-0 text-gray-4">
+<body class="select-none selection:bg-primary overflow-hidden h-screen selection:text-white bg-gray-0 text-gray-4">
 
     {{ $slot }}
 

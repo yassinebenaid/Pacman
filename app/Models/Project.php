@@ -43,7 +43,7 @@ class Project extends Model
         return $this->hasManyThrough(File::class, Task::class);
     }
 
-    public function notes()
+    public function issues()
     {
         return $this->hasMany(Issue::class);
     }

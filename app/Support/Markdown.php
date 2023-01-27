@@ -66,7 +66,7 @@ class Markdown
         $content = preg_replace_callback(
             "#\n\-([^\n]+)#",
             function ($matches) {
-                return "<div><span class='text-2xl'>• </span>$matches[1]</div>";
+                return "<li>$matches[1]</li>";
             },
             $content
         );
@@ -123,7 +123,7 @@ class Markdown
 
         // ## title
         $code = preg_replace_callback(
-            "#(public)|(function)#",
+            "#(public)|(function)|(static)#",
             function ($matches) {
                 return "<span style='color:#9d4edd'>$matches[0]</span>";
             },

@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('issues', function (Blueprint $table) {
+        Schema::create('replies', function (Blueprint $table) {
             $table->id();
-            $table->string("definer", 30);
             $table->foreignId("user_id")->constrained("users")->cascadeOnDelete();
-            $table->foreignId("project_id")->constrained("projects")->cascadeOnDelete();
+            $table->foreignId("issue_id")->constrained("issues")->cascadeOnDelete();
             $table->text("body");
+            $table->integer("views")->default(0);
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notes');
+        Schema::dropIfExists('replies');
     }
 };

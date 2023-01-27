@@ -28,8 +28,8 @@
     </style>
 </head>
 
-<body class="text-gray-4 bg-gray">
-    <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
+<body class="text-gray-4 bg-gray-0">
+    <div class="flex flex-col items-center min-h-screen  pt-6  sm:justify-center sm:pt-0">
         <div>
             <a href="/">
                 <x-breeze.application-logo />

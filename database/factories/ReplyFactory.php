@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Issue>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Reply>
  */
-class IssueFactory extends Factory
+class ReplyFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,9 +17,8 @@ class IssueFactory extends Factory
     public function definition()
     {
         return [
+            "issue_id" => fake()->numberBetween(1, 1000),
             "user_id" => fake()->numberBetween(1, 61),
-            "definer" => str()->ulid(),
-            "project_id" => fake()->numberBetween(1, 200),
             "body" => "# Hello world
             my name is yassine benaid , I am good developer
 
